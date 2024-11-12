@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>Posts</h1>
+    <div class="post-container">
+        {% if posts %}
+            {% for post in posts %}
+                <div class="post-card">
+                    <h2>{{ post.topic }}</h2>
+                    <p>{{ post.description }}</p>
+                    
+                    {% if post.extracted_topics %}
+                        <div class="extracted-topics">
+                            <h3>Extracted Topics:</h3>
+                            <ul>
+                                {% for topic in post.extracted_topics %}
+                                    <li>{{ topic }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                    
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No Posts available.</p>
+        {% endif %}
+    </div>
+{% endblock %}

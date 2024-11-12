@@ -1,0 +1,38 @@
+# Node.js (for Next.js and TurboRepo)
+node_modules/
+.next/
+out/
+dist/
+*.log
+*.env
+
+# Next.js specific build and cache
+/.turbo/
+/.next/
+/node_modules/
+
+# Python (for Flask)
+*.pyc
+*.pyo
+__pycache__/
+app/
+instance/
+.pytest_cache/
+coverage/
+*.egg-info/
+
+# Virtual Environment (for Flask)
+app/
+# IDE/editor files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Other
+*.bak
