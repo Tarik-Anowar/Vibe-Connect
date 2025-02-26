@@ -7,7 +7,6 @@ class TopicExtractor:
         self.kw_model = KeyBERT(model=self.model)
 
     def extract_topics(self, text, top_n=5):
-        # Extract keywords for both unigrams (1,1) and bigrams (2,2)
         keywords = self.kw_model.extract_keywords(
             text, keyphrase_ngram_range=(1, 2), stop_words="english", top_n=top_n
         )
