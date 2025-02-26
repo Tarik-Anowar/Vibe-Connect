@@ -1,0 +1,7 @@
+flask
+flask_pymongo
+dotenv
+gensim
+keybert
+spacy
+huggingface-hub
